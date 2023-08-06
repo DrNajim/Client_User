@@ -1,0 +1,21 @@
+<div>
+    <h1>Create Article</h1>
+    <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="title" class="form-label">Article Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Title" formControlName="title">
+          </div>
+          <div class="mb-3">
+            <label for="body" class="form-label">Article Body</label>
+            <textarea class="form-control" id="body" formControlName="body" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="author" class="form-label">Article author</label>
+            <input type="text" class="form-control" id="author" placeholder="author" formControlName="author">
+          </div>
+          <div class="mb-3">
+          <button type="submit" (click)="onSubmit()"  class="btn btn-primary">Create new Article</button>
+        </div>
+    </form>
+    <a routerLink="">Liste Article</a>
+</div>

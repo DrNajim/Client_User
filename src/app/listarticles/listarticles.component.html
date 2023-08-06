@@ -1,0 +1,20 @@
+<h1>Article Listes</h1>
+<table class="table">
+    <thead>
+      <tr >
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">Author</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let article of articles">
+        <td>{{article.title}}</td>
+        <td>{{article.body}}</td>
+        <td>{{article.author}}</td>
+        <td><button class="btn btn-success" routerLink="edite/article/{{article.id}}">Edit</button> | <button class="btn btn-danger" (click)="deleteList(article.id)">Delete</button> </td>
+
+      </tr>
+    </tbody>
+  </table>
